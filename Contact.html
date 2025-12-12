@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>
+            Contact us
+        </title>
+        <style>
+            body{
+            background-color: aliceblue;
+            }
+            h1{
+            color:rgb(79, 41, 41);
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="nav bg-dark">
+            <a class="nav-link" href="index.html">Homepage</a>
+            <a class="nav-link" href="Product.html">Product</a>
+            <a class="nav-link" href="Contact.html">Contact us</a>
+        </nav>
+         <form action="welcome.html" onsubmit="return dj()">
+            <center>
+                <h1>Contact us</h1>
+                <hr>
+                <br>
+                <br>
+                Name:<br>
+                <input type="text" id="name" name="name" >
+                <br>
+                <br>
+                Email:<br>
+                <input type="email" name="email" id="email">
+                <br>
+                <br>
+                Contact Number:<br>
+                <input type="text" name="number" id="number">
+                <br>
+                <br>
+                Product:<br>
+                <select>
+                    <option>-</option>
+                    <option value="Cashew nuts">Cashew</option>
+                    <option value="Fresh Mangoes">Fresh mangoes</option>
+                    <option value="Seeds">Seeds</option>
+                    <option value="Frozen Green Peas">Frozen Green Peas</option>
+                </select>
+                <br>
+                <br>
+                Feedback:<br>
+                <textarea id="txt">
+                </textarea>
+                <br>
+                <br>
+                <input type="submit" name="submit">
+                <br>
+                <br>
+                <hr>
+            </center>
+            <script>
+            function dj(){
+                const name= document.getElementById("name").value.trim();
+                const email= document.getElementById("email").value.trim();
+                const contactnumber= document.getElementById("number").value.trim();
+
+                if(name===""){
+                    alert("enter first name");
+                    return false;
+                }
+                if(email===""){
+                    alert("enter email");
+                    return false;
+                }
+
+                if(contactnumber===""){
+                    alert("enter your number");
+                    return false;
+                }
+
+                alert("Your message has been sent successfully!");
+                document.querySelector("form").reset();
+                return false;
+            }
+            
+        </script>
+        <h5 class="text-center mb-4">Meet Our Team</h5>
+    <div class="row justify-content-center">
+        <div class="col-md-3 text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwdhCmQFeEBuzoNqUMcCV-XeTHz4W3o6rwg&s" class="rounded-circle mb-2" alt="Team Member">
+            <p><strong>Alexa</strong><br>Customer Support</p>
+        </div>
+        <div class="col-md-3 text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwdhCmQFeEBuzoNqUMcCV-XeTHz4W3o6rwg&s" class="rounded-circle mb-2" alt="Team Member">
+            <p><strong>Jamie</strong><br>Technical Lead</p>
+        </div>
+    </div>
+    </body>
+</html>
